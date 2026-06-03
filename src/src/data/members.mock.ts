@@ -9,7 +9,7 @@ export const membersMock: IMember[] = [
       "Estudiante de comunicación social. Le apasiona la narrativa oral y el diseño de experiencias digitales para el aula.",
     bio: "Yareth coordina las líneas narrativas del grupo y facilita los talleres de escritura. Ha liderado la postproducción de audios y la curaduría de imágenes para la exposición virtual. Su interés central es conectar pedagogía y diseño de medios en contextos comunitarios.",
     image: `${import.meta.env.BASE_URL}images/integrantes/yareth.svg`,
-    audio: `${import.meta.env.BASE_URL}audios/presentacion-yareth`,
+    audio: `${import.meta.env.BASE_URL}audios/presentacion-yareth.mp3`,
   },
   {
     id: "maria-2",

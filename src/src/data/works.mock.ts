@@ -38,7 +38,7 @@ export const worksMock: IWork[] = [
     images: [
       `${import.meta.env.BASE_URL}images/trabajos/voces-1.svg`,
       `${import.meta.env.BASE_URL}images/trabajos/voces-2.svg`,
-      `${import.meta.env.BASE_URL}images/trabajos/voces-3.svg",`,
+      `${import.meta.env.BASE_URL}images/trabajos/voces-3.svg`,
     ],
     category: "Exposición",
     date: "2026",

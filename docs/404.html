@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      const path = window.location.pathname;
+      const repo = "/help-radio-workshop";
+
+      sessionStorage.setItem("redirect", path.replace(repo, ""));
+
+      window.location.replace(repo + "/");
+    </script>
+  </head>
+  <body></body>
+</html>
