@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { MainLayout } from "../components/layout/MainLayout";
 import { EvidencesPage } from "../pages/Evidences/EvidencesPage";
 import { HomePage } from "../pages/Home/HomePage";
@@ -10,7 +10,7 @@ import { WorksPage } from "../pages/Works/WorksPage";
 
 export function AppRoutes() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
@@ -23,6 +23,6 @@ export function AppRoutes() {
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
