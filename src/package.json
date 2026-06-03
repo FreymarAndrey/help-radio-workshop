@@ -9,10 +9,20 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "biome format src--write",
+      "biome lint src --error-on-warnings"
+    ],
+    "*.{json,md,css,html}": [
+      "biome format --write"
+    ]
+  },
   "dependencies": {
     "framer-motion": "12.40.0",
     "gsap": "3.15.0",
     "howler": "2.2.4",
+    "lucide-react": "^1.17.0",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "react-router-dom": "7.15.1"

@@ -1,18 +1,14 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
-
-const navLinks = [
-  { to: '/integrantes', label: 'Integrantes' },
-  { to: '/trabajos', label: 'Trabajos' },
-  { to: '/cuentos', label: 'Cuentos' },
-]
 
 export function HeroSection() {
   const glowRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reducedMotion) return
+
     const ctx = gsap.context(() => {
       gsap.to(glowRef.current, {
         scale: 1.15,
@@ -27,15 +23,14 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
+    <section className="relative px-4 pb-16 pt-16 sm:px-6 lg:px-8 lg:pb-20 lg:pt-24">
       <div
         ref={glowRef}
-        className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-teal-400/30 blur-3xl"
+        className="pointer-events-none absolute right-[20%] top-16 z-0 h-48 w-48 rounded-full bg-teal-400/20 blur-3xl"
         aria-hidden
       />
-      <div className="pointer-events-none absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-amber-300/25 blur-3xl" aria-hidden />
 
-      <div className="relative mx-auto max-w-5xl text-center">
+      <div className="relative z-10 mx-auto max-w-5xl text-center">
         <motion.p
           className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent"
           initial={{ opacity: 0, y: 12 }}
@@ -66,20 +61,17 @@ export function HeroSection() {
         </motion.p>
 
         <motion.div
-          className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
+          className="mt-10"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="w-full rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-ink shadow-sm transition hover:border-accent hover:text-accent sm:w-auto"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <a
+            href="#equipo"
+            className="inline-flex rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-700"
+          >
+            Conocer al equipo ↓
+          </a>
         </motion.div>
       </div>
     </section>

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import type { IWork } from "../interfaces/work.interface";
 
 interface WorkCardProps {
@@ -18,7 +18,7 @@ export function WorkCard({ work, index = 0 }: WorkCardProps) {
       transition={{ duration: 0.45, delay: index * 0.08 }}
     >
       <Link
-        to={`/trabajos/${work.id}`}
+        to={`/producciones/${work.id}`}
         className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-sm transition hover:border-accent/40 hover:shadow-md"
       >
         <div className="relative aspect-16/10 overflow-hidden bg-slate-100">

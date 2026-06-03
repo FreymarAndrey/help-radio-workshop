@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 2400" fill="none" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="50%" stop-color="#134e4a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="2400" fill="url(#bg)"/>
+  <rect width="1920" height="2400" fill="url(#glow)"/>
+
+  <!-- Sound booth / studio window -->
+  <rect x="560" y="180" width="800" height="520" rx="24" fill="#0d9488" fill-opacity="0.12" stroke="#5eead4" stroke-width="2" stroke-opacity="0.2"/>
+  <rect x="600" y="220" width="720" height="440" rx="12" fill="#042f2e" opacity="0.5"/>
+
+  <!-- Microphone stand -->
+  <rect x="920" y="680" width="80" height="280" rx="8" fill="#94a3b8" opacity="0.3"/>
+  <ellipse cx="960" cy="680" rx="120" ry="40" fill="#64748b" opacity="0.25"/>
+  <rect x="900" y="560" width="120" height="160" rx="60" fill="#334155" opacity="0.4"/>
+  <rect x="930" y="520" width="60" height="80" rx="30" fill="#475569" opacity="0.5"/>
+  <line x1="960" y1="960" x2="960" y2="1100" stroke="#64748b" stroke-width="6" opacity="0.3"/>
+
+  <!-- Mixing desk -->
+  <rect x="320" y="1200" width="1280" height="180" rx="16" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="2"/>
+  <rect x="360" y="1240" width="40" height="100" rx="4" fill="#0d9488" opacity="0.3"/>
+  <rect x="420" y="1250" width="40" height="90" rx="4" fill="#0d9488" opacity="0.25"/>
+  <rect x="480" y="1245" width="40" height="95" rx="4" fill="#0d9488" opacity="0.28"/>
+  <rect x="540" y="1255" width="40" height="85" rx="4" fill="#0d9488" opacity="0.22"/>
+  <rect x="600" y="1240" width="40" height="100" rx="4" fill="#d97706" opacity="0.25"/>
+  <rect x="660" y="1250" width="40" height="90" rx="4" fill="#d97706" opacity="0.2"/>
+  <circle cx="800" cy="1290" r="28" fill="#475569" opacity="0.4"/>
+  <circle cx="880" cy="1290" r="28" fill="#475569" opacity="0.35"/>
+  <circle cx="960" cy="1290" r="28" fill="#475569" opacity="0.4"/>
+  <circle cx="1040" cy="1290" r="28" fill="#475569" opacity="0.35"/>
+
+  <!-- Waveforms -->
+  <path d="M200 1600 Q280 1550 360 1600 T520 1600 T680 1600 T840 1600" stroke="#14b8a6" stroke-width="3" fill="none" opacity="0.25"/>
+  <path d="M1200 1580 Q1280 1530 1360 1580 T1520 1580 T1680 1580" stroke="#14b8a6" stroke-width="3" fill="none" opacity="0.2"/>
+  <path d="M400 1700 Q480 1650 560 1700 T720 1700 T880 1700" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.15"/>
+
+  <!-- Headphones silhouette -->
+  <path d="M1400 900 Q1400 780 1520 780 Q1640 780 1640 900 L1640 980 Q1640 1040 1580 1040 L1580 900 Q1580 840 1520 840 Q1460 840 1460 900 L1460 1040 Q1400 1040 1400 980 Z" fill="#475569" opacity="0.25"/>
+
+  <!-- Second mic lower section -->
+  <rect x="280" y="1900" width="100" height="140" rx="50" fill="#334155" opacity="0.35"/>
+  <rect x="300" y="1860" width="60" height="80" rx="30" fill="#475569" opacity="0.4"/>
+  <line x1="330" y1="2040" x2="330" y2="2140" stroke="#64748b" stroke-width="5" opacity="0.25"/>
+
+  <!-- Camera / recorder -->
+  <rect x="1500" y="1850" width="200" height="140" rx="16" fill="#1e293b" opacity="0.45" stroke="#475569" stroke-width="2"/>
+  <circle cx="1600" cy="1920" r="50" fill="#0f172a" opacity="0.5" stroke="#64748b" stroke-width="3"/>
+  <circle cx="1600" cy="1920" r="28" fill="#334155" opacity="0.6"/>
+
+  <!-- Ambient lights -->
+  <circle cx="300" cy="400" r="80" fill="#fbbf24" opacity="0.08"/>
+  <circle cx="1600" cy="600" r="100" fill="#14b8a6" opacity="0.1"/>
+  <circle cx="960" cy="2100" r="120" fill="#0d9488" opacity="0.08"/>
+</svg>

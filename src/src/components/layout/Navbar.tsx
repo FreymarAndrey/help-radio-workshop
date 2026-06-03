@@ -4,9 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   { to: "/", label: "Inicio", end: true },
-  { to: "/integrantes", label: "Integrantes" },
-  { to: "/trabajos", label: "Trabajos" },
-  { to: "/cuentos", label: "Cuentos" },
+  { to: "/producciones", label: "Producciones" },
+  { to: "/evidencias", label: "Evidencias" },
 ];
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
