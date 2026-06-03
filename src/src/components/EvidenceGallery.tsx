@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import { evidenceCategories } from "../data/evidences.mock";
 import type { IEvidence } from "../interfaces/evidence.interface";
-import { EvidenceCard } from "./EvidenceCard";
+// import { EvidenceCard } from "./EvidenceCard";
 import { EvidenceFilter } from "./EvidenceFilter";
 
 interface EvidenceGalleryProps {
@@ -82,11 +82,10 @@ export function EvidenceGallery({ items }: EvidenceGalleryProps) {
             }
             return (
               <div key={evidence.id} className={extraClass}>
-                <EvidenceCard
-                  evidence={evidence}
-                  index={index}
-                  onImageClick={(src, alt) => setLightbox({ src, alt })}
-                />
+                <div className="rounded-xl border bg-white p-4">
+                  <h3>{evidence.title}</h3>
+                  <p>{evidence.description}</p>
+                </div>
               </div>
             );
           })}
