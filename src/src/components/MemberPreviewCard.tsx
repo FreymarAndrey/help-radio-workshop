@@ -45,12 +45,9 @@ export function MemberPreviewCard({
             </p>
           </div>
 
-          <Link
-            to={`/integrantes/${member.id}`}
-            className="mt-auto pt-4 text-sm font-semibold text-accent transition hover:text-teal-700"
-          >
+          <span className="mt-auto pt-4 text-sm font-semibold text-accent transition hover:text-teal-700">
             Ver perfil →
-          </Link>
+          </span>
         </div>
       </Link>
     </motion.article>

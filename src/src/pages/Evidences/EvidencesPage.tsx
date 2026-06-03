@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatedTitle } from "../../components/AnimatedTitle";
 import { EvidenceGallery } from "../../components/EvidenceGallery";
-import { MediaBackground } from "../../components/MediaBackground";
+// import { MediaBackground } from "../../components/MediaBackground";
 import type { IEvidence } from "../../interfaces/evidence.interface";
 import { getEvidences } from "../../services/evidences.service";
 
@@ -22,9 +22,11 @@ export function EvidencesPage() {
     };
   }, []);
 
+  console.log("EvidencesPage render");
+  console.log({ loading, evidences });
   return (
     <div className="relative isolate min-h-full">
-      <MediaBackground />
+      {/* <MediaBackground /> */}
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <AnimatedTitle
           title="Evidencias"
