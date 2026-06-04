@@ -32,7 +32,7 @@ export function AudioPlayer({ src, label, compact = false }: AudioPlayerProps) {
           onClick={toggle}
           disabled={!showProgress && !error}
           aria-label={isPlaying ? "Pausar audio" : "Reproducir audio"}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-white transition hover:bg-teal-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-white transition hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isPlaying ? (
             <svg

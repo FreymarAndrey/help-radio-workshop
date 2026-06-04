@@ -8,10 +8,7 @@ export const worksMock: IWork[] = [
       "Investigación-acción con testimonios orales y archivo fotográfico de una comunidad universitaria.",
     description:
       "Spot radial para la Copa Mundial de Fútbol 2014. El proyecto investiga la cultura del fútbol en Brasil y cómo se refleja en el país. Se realizaron entrevistas con personas de diferentes edades y contextos sociales para obtener información sobre su relación con el fútbol. Se utilizó la metodología de la investigación-acción para obtener información sobre la cultura del fútbol en Brasil. ",
-    images: [
-      `${import.meta.env.BASE_URL}images/trabajos/spot-radial-1.svg`,
-      `${import.meta.env.BASE_URL}images/trabajos/spot-radial-2.svg`,
-    ],
+    images: [`${import.meta.env.BASE_URL}images/trabajos/spot-radial.jpeg`],
     audio: `${import.meta.env.BASE_URL}audios/spot-mundial-2014.mp3`,
     category: "Spot radial",
     date: "2014",
@@ -22,7 +19,7 @@ export const worksMock: IWork[] = [
     title: "Radionovela",
     summary: "Radio novela para la feria académica universitaria.",
     description: "TEMA: Radionovela - LUCECITA: Lo que el corazón no olvida”",
-    images: [`${import.meta.env.BASE_URL}images/trabajos/radionovela.svg`],
+    images: [`${import.meta.env.BASE_URL}images/trabajos/radionovela.jpeg`],
     audio: `${import.meta.env.BASE_URL}audios/radionovela.mp3`,
     category: "Radionovela",
     date: "2026",

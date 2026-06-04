@@ -1,13 +1,15 @@
-import { useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
-import gsap from 'gsap'
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 export function HeroSection() {
-  const glowRef = useRef<HTMLDivElement>(null)
+  const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reducedMotion) return
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (reducedMotion) return;
 
     const ctx = gsap.context(() => {
       gsap.to(glowRef.current, {
@@ -16,23 +18,23 @@ export function HeroSection() {
         duration: 4,
         repeat: -1,
         yoyo: true,
-        ease: 'sine.inOut',
-      })
-    })
-    return () => ctx.revert()
-  }, [])
+        ease: "sine.inOut",
+      });
+    });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section className="relative px-4 pb-16 pt-16 sm:px-6 lg:px-8 lg:pb-20 lg:pt-24">
       <div
         ref={glowRef}
-        className="pointer-events-none absolute right-[20%] top-16 z-0 h-48 w-48 rounded-full bg-teal-400/20 blur-3xl"
+        className="pointer-events-none absolute right-[20%] top-16 z-0 h-48 w-48 rounded-full bg-accent/15 blur-3xl"
         aria-hidden
       />
 
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         <motion.p
-          className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+          className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-subtitle"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -46,7 +48,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          Voces, trabajos y narrativas de nuestro grupo
+          Voces que Transforman
         </motion.h1>
 
         <motion.p
@@ -55,9 +57,9 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
         >
-          Explora integrantes, proyectos académicos y cuentos narrados en una
-          experiencia interactiva pensada para compartir nuestro trabajo en el
-          aula y más allá.
+          Explora integrantes, proyectos académicos y producciones narrados en
+          una experiencia interactiva pensada para compartir nuestro trabajo en
+          el aula y más allá.
         </motion.p>
 
         <motion.div
@@ -68,12 +70,12 @@ export function HeroSection() {
         >
           <a
             href="#equipo"
-            className="inline-flex rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-700"
+            className="inline-flex rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-hover"
           >
             Conocer al equipo ↓
           </a>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

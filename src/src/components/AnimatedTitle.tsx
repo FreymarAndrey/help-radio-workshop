@@ -25,7 +25,7 @@ export function AnimatedTitle({
         {title}
       </h1>
       {subtitle ? (
-        <p className="max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
+        <p className="max-w-2xl text-base leading-relaxed text-subtitle sm:text-lg">
           {subtitle}
         </p>
       ) : null}

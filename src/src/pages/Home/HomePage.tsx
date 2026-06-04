@@ -43,9 +43,14 @@ export function HomePage() {
           <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
             Nuestro equipo
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-base text-ink-muted">
-            Conoce a cada integrante, escucha su presentación y descubre su rol
-            en el taller de radio.
+          <p className="mx-auto mt-3 max-w-2xl text-base text-subtitle">
+            Somos un equipo de cinco estudiantes creativos, comprometidos y
+            apasionados por la comunicación. Nos caracterizamos por nuestra
+            actitud positiva, el trabajo colaborativo y la capacidad de
+            transformar ideas en proyectos innovadores. Juntos combinamos
+            nuestros talentos y perspectivas para crear contenidos dinámos,
+            inspiradores y auténticos, demostrando que cuando la creatividad y
+            el trabajo en equipo se unen, se pueden lograr grandes resultados.
           </p>
         </motion.header>
 

@@ -81,7 +81,13 @@ export function Navbar() {
                   <NavLink
                     to={link.to}
                     end={link.end}
-                    className={linkClass}
+                    className={({ isActive }) =>
+                      `block w-full rounded-xl px-4 py-3 text-sm font-medium transition ${
+                        isActive
+                          ? "bg-accent text-white shadow-sm"
+                          : "text-ink-muted hover:bg-slate-100 hover:text-ink"
+                      }`
+                    }
                     onClick={() => setOpen(false)}
                   >
                     {link.label}

@@ -7,18 +7,9 @@ interface MemberPreviewCardProps {
   index?: number;
 }
 
-export function MemberPreviewCard({
-  member,
-  index = 0,
-}: MemberPreviewCardProps) {
+export function MemberPreviewCard({ member }: MemberPreviewCardProps) {
   return (
-    <motion.article
-      className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 shadow-sm backdrop-blur-sm transition hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
+    <motion.article className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 shadow-sm backdrop-blur-sm transition hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg">
       <Link
         to={`/integrantes/${member.id}`}
         className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-sm transition hover:border-accent/40 hover:shadow-md"
@@ -45,7 +36,7 @@ export function MemberPreviewCard({
             </p>
           </div>
 
-          <span className="mt-auto pt-4 text-sm font-semibold text-accent transition hover:text-teal-700">
+          <span className="mt-auto pt-4 text-sm font-semibold text-accent transition hover:text-accent-hover">
             Ver perfil →
           </span>
         </div>

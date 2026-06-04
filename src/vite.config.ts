@@ -12,4 +12,13 @@ export default defineConfig({
       src: "/src",
     },
   },
+
+  server: {
+    host: true,
+    strictPort: true,
+    port: 5173,
+    watch: {
+      usePolling: true,
+    },
+  },
 });

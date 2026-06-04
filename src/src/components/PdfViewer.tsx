@@ -13,7 +13,7 @@ export function PdfViewer({ src, title }: PdfViewerProps) {
           target="_blank"
           rel="noopener noreferrer"
           download
-          className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-700"
+          className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-hover"
         >
           Descargar PDF
         </a>
