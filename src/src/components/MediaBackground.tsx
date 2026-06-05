@@ -3,7 +3,7 @@ const BACKGROUND_IMAGE = `${import.meta.env.BASE_URL}images/backgrounds/backgrou
 export function MediaBackground() {
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-5 overflow-hidden"
+      className="pointer-events-none fixed inset-0 -z-5 overflow-hidden"
       aria-hidden
     >
       <img
