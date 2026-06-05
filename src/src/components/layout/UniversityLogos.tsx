@@ -11,8 +11,8 @@ export function UniversityLogos({ variant = "navbar" }: UniversityLogosProps) {
     <div
       className={
         isNavbar
-          ? "border-b border-slate-200/70 bg-surface/85 backdrop-blur-md z-50"
-          : "border-b border-slate-200/70 bg-white z-50"
+          ? "border-b border-slate-200/70 bg-surface/85 backdrop-blur-md z-2"
+          : "border-b border-slate-200/70 bg-white z-2"
       }
     >
       <div

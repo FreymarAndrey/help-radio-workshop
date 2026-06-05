@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import type { IEvidenceMedia } from "../interfaces/evidence-media.interface";
 
 interface EvidenceMediaGalleryProps {
@@ -220,75 +221,78 @@ export function EvidenceMediaGallery({ items }: EvidenceMediaGalleryProps) {
         ))}
       </ul>
 
-      <AnimatePresence>
-        {activeItem && activeIndex !== null ? (
-          <motion.div
-            className="fixed inset-0 z-100 flex items-center justify-center p-4 backdrop-blur-sm"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Galería ampliada"
-          >
-            <button
-              type="button"
-              className="absolute inset-0 bg-ink/85"
-              onClick={close}
-              aria-label="Cerrar galería"
-            />
-
-            <motion.button
-              type="button"
-              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-              onClick={close}
-              aria-label="Cerrar"
+      {createPortal(
+        <AnimatePresence>
+          {activeItem && activeIndex !== null ? (
+            <motion.div
+              className="fixed inset-0 z-100 flex items-center justify-center p-4 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Galería ampliada"
             >
-              <X className="h-5 w-5" aria-hidden />
-            </motion.button>
-
-            <p className="pointer-events-none absolute left-1/2 top-4 z-10 -translate-x-1/2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
-              {activeIndex + 1} / {items.length}
-            </p>
-
-            <div className="relative z-10 flex w-full max-w-5xl items-center justify-center gap-2 sm:gap-4">
               <button
                 type="button"
-                onClick={goPrev}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:h-12 sm:w-12"
-                aria-label="Anterior"
-              >
-                <ChevronLeft className="h-6 w-6" aria-hidden />
-              </button>
+                className="absolute inset-0 bg-ink/85"
+                onClick={close}
+                aria-label="Cerrar galería"
+              />
 
-              <motion.div
-                key={activeItem.src}
-                className="flex min-h-0 min-w-0 flex-1 items-center justify-center"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.25 }}
-              >
-                <LightboxMedia
-                  item={activeItem}
-                  onVideoMount={(el) => {
-                    videoRef.current = el;
-                  }}
-                />
-              </motion.div>
-
-              <button
+              <motion.button
                 type="button"
-                onClick={goNext}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:h-12 sm:w-12"
-                aria-label="Siguiente"
+                className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                onClick={close}
+                aria-label="Cerrar"
               >
-                <ChevronRight className="h-6 w-6" aria-hidden />
-              </button>
-            </div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+                <X className="h-5 w-5" aria-hidden />
+              </motion.button>
+
+              <p className="pointer-events-none absolute left-1/2 top-4 z-10 -translate-x-1/2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
+                {activeIndex + 1} / {items.length}
+              </p>
+
+              <div className="relative z-10 flex w-full max-w-5xl items-center justify-center gap-2 sm:gap-4">
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:h-12 sm:w-12"
+                  aria-label="Anterior"
+                >
+                  <ChevronLeft className="h-6 w-6" aria-hidden />
+                </button>
+
+                <motion.div
+                  key={activeItem.src}
+                  className="flex min-h-0 min-w-0 flex-1 items-center justify-center"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  <LightboxMedia
+                    item={activeItem}
+                    onVideoMount={(el) => {
+                      videoRef.current = el;
+                    }}
+                  />
+                </motion.div>
+
+                <button
+                  type="button"
+                  onClick={goNext}
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:h-12 sm:w-12"
+                  aria-label="Siguiente"
+                >
+                  <ChevronRight className="h-6 w-6" aria-hidden />
+                </button>
+              </div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>,
+        document.body,
+      )}
     </>
   );
 }

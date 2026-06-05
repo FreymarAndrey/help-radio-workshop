@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <>
       <UniversityLogos variant="navbar" />
-      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-surface/85 backdrop-blur-md">
+      <header className="sticky top-0 z-1 border-b border-slate-200/70 bg-surface/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <NavLink
             to="/"
