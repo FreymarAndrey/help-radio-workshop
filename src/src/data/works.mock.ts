@@ -27,18 +27,14 @@ export const worksMock: IWork[] = [
   },
   {
     id: "trabajo-3",
-    title: "Exposición virtual: voces del aula",
-    summary:
-      "Sitio experimental con galería, audio y microanimaciones para feria académica universitaria.",
+    title: "Cuento infantil",
+    summary: "La bisabuela de Helena",
     description:
-      "La exposición virtual integra piezas de cada integrante del grupo: audios, imágenes y textos breves. El PDF adjunto funciona como catálogo impreso de la muestra, con créditos, referencias bibliográficas y capturas de la interfaz final desplegada en la feria.",
-    images: [
-      `${import.meta.env.BASE_URL}images/trabajos/voces-1.svg`,
-      `${import.meta.env.BASE_URL}images/trabajos/voces-2.svg`,
-      `${import.meta.env.BASE_URL}images/trabajos/voces-3.svg`,
-    ],
-    category: "Exposición",
+      "Este proyecto radial está basado en la adaptación del cuento infantil “La bisabuela de Helena”, desarrollado a través de la narración, interpretación de personajes y ambientación sonora con el objetivo de transmitir emociones y fortalecer el lenguaje radiofónico. Uno de los aspectos más importantes del trabajo fue la creación manual de los efectos de sonido, realizados por los integrantes utilizando objetos cotidianos, demostrando creatividad, trabajo en equipo y la importancia del sonido dentro de la producción radial.",
+    images: [`${import.meta.env.BASE_URL}images/trabajos/cuento-infantil.jpeg`],
+    category: "Cuentos",
     date: "2026",
-    pdf: `${import.meta.env.BASE_URL}pdfs/voces-del-aula.pdf`,
+    pdf: `${import.meta.env.BASE_URL}pdfs/cuento-infantil.pdf`,
+    audio: `${import.meta.env.BASE_URL}audios/cuento-infantil.mpeg`,
   },
 ];
