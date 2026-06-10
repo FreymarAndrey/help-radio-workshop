@@ -50,7 +50,7 @@ export const membersMock: IMember[] = [
     description:
       "Diseñadora gráfica, comunicadora social, diseñadora de modas y emprendedora",
     bio: "Soy Melany Perozo, diseñadora gráfica, comunicadora social, diseñadora de modas y emprendedora. Me apasiona la creatividad y los medios de comunicación como herramientas para transformar ideas en proyectos con propósito.He desarrollado experiencia en áreas como la publicidad, la moda, el diseño y la creación de contenido, combinando estrategia e innovación en cada proyecto. También disfruto la enseñanza y la formación de nuevos talentos, especialmente en el ámbito del modelaje y el desarrollo personal. Me caracterizo por ser una persona creativa, comprometida y en constante aprendizaje, siempre en busca de nuevas oportunidades para crecer y generar un impacto positivo a través de mi trabajo.",
-    audio: `${import.meta.env.BASE_URL}audios/presentacion-melany.mp3`,
+    audio: `${import.meta.env.BASE_URL}audios/presentacion-melany.mpeg`,
     image: `${import.meta.env.BASE_URL}images/integrantes/miembro-5.jpeg`,
     pdf: `${import.meta.env.BASE_URL}pdfs/demo.pdf`,
   },
