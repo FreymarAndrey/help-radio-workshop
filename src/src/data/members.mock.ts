@@ -20,7 +20,7 @@ export const membersMock: IMember[] = [
     bio: "Comunicadora social en formación. Me caracterizo por ser una persona carismática, responsable y con una autenticidad diferente que le aporta frescura a cada proyecto. Dentro de un equipo, mi valor principal reside en el orden, el criterio y esa puntualidad inquebrantable que me define, asegurando que cada proceso sea coherente y bien estructurado.",
     audio: `${import.meta.env.BASE_URL}audios/presentacion-maria.mp3`,
     image: `${import.meta.env.BASE_URL}images/integrantes/miembro-2.jpeg`,
-    pdf: `${import.meta.env.BASE_URL}pdfs/demo.pdf`,
+    pdf: `${import.meta.env.BASE_URL}pdfs/perfil-alejandra-guion.pdf`,
   },
   {
     id: "julieth-3",
