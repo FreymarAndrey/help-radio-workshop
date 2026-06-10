@@ -1,9 +1,10 @@
 export interface IMember {
-  id: string
-  name: string
-  role: string
-  description: string
-  bio: string
-  image: string
-  audio: string
+  id: string;
+  name: string;
+  role: string;
+  description: string;
+  bio: string;
+  image: string;
+  audio: string;
+  pdf: string;
 }

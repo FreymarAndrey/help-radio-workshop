@@ -25,7 +25,6 @@ export function MemberPreviewCard({ member }: MemberPreviewCardProps) {
             {member.role}
           </span>
         </div>
-
         <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
           <div>
             <h3 className="font-display text-xl font-semibold text-ink">

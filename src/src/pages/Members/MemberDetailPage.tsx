@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import { AudioPlayer } from "../../components/AudioPlayer";
 import { MediaBackground } from "../../components/MediaBackground";
+import { PdfViewer } from "../../components/PdfViewer";
 import { useDetailResource } from "../../hooks/useDetailResource";
 import { getMemberById } from "../../services/members.service";
 
@@ -83,6 +84,9 @@ export function MemberDetailPage() {
             <AudioPlayer src={member.audio} label="Audio de presentación" />
           </div>
         </motion.div>
+        <div className="mt-8 ">
+          <PdfViewer src={member.pdf} title={member.name} />
+        </div>
       </div>
     </div>
   );

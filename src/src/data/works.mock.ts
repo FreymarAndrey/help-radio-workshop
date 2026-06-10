@@ -9,7 +9,7 @@ export const worksMock: IWork[] = [
     description:
       "Spot radial para la Copa Mundial de Fútbol 2014. El proyecto investiga la cultura del fútbol en Brasil y cómo se refleja en el país. Se realizaron entrevistas con personas de diferentes edades y contextos sociales para obtener información sobre su relación con el fútbol. Se utilizó la metodología de la investigación-acción para obtener información sobre la cultura del fútbol en Brasil. ",
     images: [`${import.meta.env.BASE_URL}images/trabajos/spot-radial.jpeg`],
-    audio: `${import.meta.env.BASE_URL}audios/spot-mundial-2014.mp3`,
+    audio: `${import.meta.env.BASE_URL}audios/spot-mundial-2014.mpeg`,
     category: "Spot radial",
     date: "2014",
     pdf: `${import.meta.env.BASE_URL}pdfs/spot-radial.pdf`,
